@@ -1,28 +1,50 @@
 import requests
 
-user_id='iiwvh24n0pszxg56r4kj31016'
+user_id='m8f4bbvgse5o0a1n0fpmkmswc'
+playlist_id='3eHvv9AcEN97dQROnoFrU3'
 SPOTIFY_CREATE_PLAYLIST_URL = f'https://api.spotify.com/v1/users/{user_id}/playlists'
-ACCESS_TOKEN = 'BQBQhMCVASThhixnioNSc__JWC8gu83Uev_58zvx0WGB5DOQ2-RNyqbN8Cv1AfXx5fW1p3VNOCv1QM_JOOOCdo1SIfM3ICQdqneqaL2fYGDsp-h-yUHX8n38Ks_9Ar9Dgwj0919tNpv3CurLDmmfEbU4wlFJNOGcdMcy9OPSiEWRjMpWUCrr9B3I1B_9iZ_YVN0E0UclWYqH9IxlKhzRE2ZkVIglbki8Y6hEN_b3cK3Zo-f_kaZ6U_nDZRo1'
+SPOTIFY_CHANGE_PLAYLIST_URL = f'https://api.spotify.com/v1/playlists/{playlist_id}'
 
-def create_playlist_on_spotify(name,public):
-    response=requests.post(
-        SPOTIFY_CREATE_PLAYLIST_URL,
+
+ACCESS_TOKEN = 'BQBU9GdFduZBGOLQlRhGHtsGP6iiqQDwPP7nmH5op0x7IzLcNi7NXa7t9mZn1_kZI3Nj-lTyv8VCCqF7xCDOChDI6bJ_NatRqvR3OJSqv-PXA5kvV1yxPMWSEyrKB_c-eixyTFMywsR3Re34Z4vzNKbKq0e0lj_VahzE8XqiJKuZxV3eOLXdmcfIYOOdlTgb8nErkcbNY7BMnf3KXOlJok3x9Nsn0MVvntmbFTVCjih7naWThZ1oBLvH4ZiX'
+
+
+# def create_playlist_on_spotify(name,public):
+#     response=requests.post(
+#         SPOTIFY_CREATE_PLAYLIST_URL,
+#         headers={
+#             "Authorization": f"Bearer {ACCESS_TOKEN}"
+#         },
+#         json={
+#             "name": name,
+#             "public": public
+#         }
+#     )
+#     json_resp = response.json()
+        
+#     return json_resp
+
+
+def change_playlist_on_spotify(name,description,public):
+    response=requests.put(
+        SPOTIFY_CHANGE_PLAYLIST_URL,
         headers={
             "Authorization": f"Bearer {ACCESS_TOKEN}"
         },
         json={
             "name": name,
+            "description": description,
             "public": public
         }
     )
-    json_resp = response.json()
+    #json_resp = response.json()
         
-    return json_resp
-
+    #return json_resp
+    
 
 def main():
-    playlist=create_playlist_on_spotify(name='coding',public=False)
-    print(f"Playlist: {playlist}")
+    change_playlist_on_spotify(name='drunklist',description='i am actually NOT problematic',public=False)
+    #print(f"Playlist: {playlist}")
 
 if __name__ == '__main__':
     main()
