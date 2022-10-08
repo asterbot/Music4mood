@@ -4,15 +4,14 @@ import requests
 # seed_genres = 'pop'
 # seed_tracks = '0c6xIDDpzE81m2q797ordA'
 SPOTIFY_GET_RECOMMENDATIONS_URL = f'https://api.spotify.com/v1/recommendations'
-ACCESS_TOKEN = 'BQDsKL7pdEc004hc7PQW3Ab6UTnu1DU_cnGNjdHwZ99gnWFeT8cufr'
-
+ACCESS_TOKEN = 'BQD9e1QBoBE9UK1MyrZwEsf9vOKeyrn5--QtCRLX52GMCdZp3wo12iybVQGT5NrC1_c_-x854YgiHuE3mwBEv5gdhSAqYHKGay-ayQYj9fwOtfvERvOiCJjGEcpmuINjiaBK2Y1ohR94mnxqdlYsPN79pdD1JNnYakFPwFpjOCQP6v8bsk5Dllb8kkOJwHc'
 def get_recommendations_on_spotify(seed_artists,seed_genres,seed_tracks):
     response=requests.get(
         SPOTIFY_GET_RECOMMENDATIONS_URL,
         headers={
             "Authorization": f"Bearer {ACCESS_TOKEN}",
-            # "Content-Type": "application/json",
-            # "Host": "api.spotify.com"
+            "Content-Type": "application/json",
+            "Host": "api.spotify.com"
         },
         json={
             "seed_artists": seed_artists,
