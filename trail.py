@@ -6,8 +6,7 @@ SPOTIFY_CREATE_PLAYLIST_URL = f'https://api.spotify.com/v1/users/{user_id}/playl
 SPOTIFY_CHANGE_PLAYLIST_URL = f'https://api.spotify.com/v1/playlists/{playlist_id}'
 
 
-ACCESS_TOKEN = 'BQBU9GdFduZBGOLQlRhGHtsGP6iiqQDwPP7nmH5op0x7IzLcNi7NXa7t9mZn1_kZI3Nj-lTyv8VCCqF7xCDOChDI6bJ_NatRqvR3OJSqv-PXA5kvV1yxPMWSEyrKB_c-eixyTFMywsR3Re34Z4vzNKbKq0e0lj_VahzE8XqiJKuZxV3eOLXdmcfIYOOdlTgb8nErkcbNY7BMnf3KXOlJok3x9Nsn0MVvntmbFTVCjih7naWThZ1oBLvH4ZiX'
-
+ACCESS_TOKEN = '' #put access token here from spotify developer.spotify.com and go to console and get access token
 
 # def create_playlist_on_spotify(name,public):
 #     response=requests.post(
