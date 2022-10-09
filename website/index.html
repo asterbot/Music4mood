@@ -5,18 +5,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-
-            </ul>
-        </div>
         <br>
         <!-- <input type="button" onclick="word_by_word('What is your mood today?')"></input> -->
         <br>
         <center><textarea id="text" rows="30" cols="20" onclick="deletestuff()"></textarea></center>
-        <br><br>
+        <br><br><br>
         <center><button class="button2">
             Find me a song!
         </button></center>
@@ -24,7 +17,7 @@
     <script>
         var flag=false;
         window.onload = function() {
-         word_by_word('What is your mood today?');
+         word_by_word('What is your mood today? \n \n(Click here)');
         };
 
         function deletestuff(){

@@ -7,53 +7,12 @@ body{
     margin: 0px;
 }
 
-.navbar{
-    width: 100%;
-    height: 10%;
-    background-color: #28536B;
-    border-bottom: 3px solid black;
-    top: 0;
-    left: 0;
-    font-family: 'Trebuchet MS', sans-serif;
-    border: 0px;
-    padding: 0px;
-    margin: 0px; 
-
-}
-ul{
-    list-style-type: none;
-    width: 100%;
-    overflow: hidden;  
-    padding: 0px; 
-
-}
-.navbar li{
-    float: left;
-}
-li a{
-    text-decoration: none;
-    color: #E2CFEA;
-    font-size: 25px;
-    background-color: #28536B;
-    padding:20px 20px 0px 20px;
-    /* padding: 20px; */
-    margin: 0px;
-    display: block;
-}
-li a:hover{
-    display: block;
-    color: #AEA4BF;
-}
-li a.active{
-    color: black;
-    background-color: orange;
-}
-                      
+                   
 
 textarea{
     background-color: #95D9DA;
-    color: 28536B;
-    border: 0.5px solid black;
+    color: #28536B;
+    border: 0px;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
@@ -61,24 +20,27 @@ textarea{
     height: 60%;
     font-size: 30px;
     text-align: center;
-    scroll: auto;
 }
 
 /* From uiverse.io by @shah1345 */
 .button2 {
+    width: 20%;
+    height: 10%;
+    min-width: 200px;
     display: inline-block;
     transition: all 0.2s ease-in;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    color: #353A47;
+    color: #28536B;
     padding: 0.7em 1.7em;
     font-size: 18px;
+    font-family: 'Trebuchet MS', sans-serif;
     border-radius: 0.5em;
-    background: #E2CFEA;
-    border: 1px solid #E2CFEA;
-    box-shadow: 6px 6px 12px #AEA4BF,
-               -6px -6px 12px #AEA4BF;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 6px 6px 12px #E2CFEA,
+               -6px -6px 12px #E2CFEA;
   }
   
   .button2:active {
@@ -118,7 +80,7 @@ textarea{
   }
   
   .button2:hover {
-    color: #E2CFEA;
+    color: #ffffff;
     border: 1px solid #28536B;
   }
   
