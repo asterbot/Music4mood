@@ -22,13 +22,16 @@
         </button></center>
     </body>
     <script>
+        var flag=false;
         window.onload = function() {
          word_by_word('What is your mood today?');
         };
 
         function deletestuff(){
-            document.getElementById("text").value = "";
-        }
+            if(flag==false){
+                document.getElementById("text").value = "";
+                flag=true;
+            }}
         function word_by_word(s){
             var words = s.split(" ");
             var i = 0;
