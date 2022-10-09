@@ -177,11 +177,11 @@
         window.onload = function() {
         word_by_word('What is your mood today? \n \n(Click here)');
         stuff="{{ data }}";
-        stuff_array=stuff.slice(1,stuff.length-1).split(",");    
+        stuff_array=stuff.slice(0,stuff.length-1).split(",");    
         // document.getElementById("stuff").innerHTML = stuff_array;
         for (i=0; i<stuff_array.length; i++){
             document.getElementById("stuff").innerHTML += "<br>";
-            document.getElementById("stuff").innerHTML += stuff_array[i].slice(2,stuff_array[i].length-2);
+            document.getElementById("stuff").innerHTML += stuff_array[i].slice(6,stuff_array[i].length-5);
             }
         }
 
