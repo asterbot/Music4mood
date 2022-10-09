@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body onload="dostuff()">
+    <p id="stuff">your songs</p>
+</body>
+<script>
+    var data = "{{ data }}";
+
+    function dostuff(){
+        if ("{{ flag }}" == "True"){
+            document.getElementById("stuff").innerHTML = data;
+        }
+        else{
+            document.getElementById("stuff").innerHTML = "no data";
+        }
+    }
+</script>
+</html>
