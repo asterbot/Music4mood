@@ -1,0 +1,46 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>What's your mood?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+        </div>
+        <br>
+        <!-- <input type="button" onclick="word_by_word('What is your mood today?')"></input> -->
+        <br>
+        <center><textarea id="text" rows="30" cols="20" onclick="deletestuff()"></textarea></center>
+        <br><br>
+        <center><button class="button2">
+            Find me a song!
+        </button></center>
+    </body>
+    <script>
+        window.onload = function() {
+         word_by_word('What is your mood today?');
+        };
+
+        function deletestuff(){
+            document.getElementById("text").value = "";
+        }
+        function word_by_word(s){
+            var words = s.split(" ");
+            var i = 0;
+            var timer = setInterval(function(){
+                document.getElementById("text").innerHTML += s[i];
+                i++;
+                if(i >= s.length){
+                    clearInterval(timer);
+                }
+            }, 40);
+        }
+
+
+    </script>
+</html>
