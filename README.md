@@ -12,6 +12,11 @@ We were inspired by music's ability to convey emotions beyond just words, so we 
 ## Technologies
 Flask, text2emotion library, Spotify API
 
+## Libraries to pip install (Requirements)
+text2emotion: version 0.0.5
+<br>emoji: version 0.6.0
+<br>nltk: version 3.7
+
 #### Languages
 Python, Javascript, HTML, CSS
 
