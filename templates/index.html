@@ -200,7 +200,7 @@
         for (i=0; i<stuff_array.length; i++){
             var final=stuff_array[i].slice(6,stuff_array[i].length-5);
             var new_final=final.slice(0,25).concat("embed/").concat(final.slice(25,final.length));
-            document.getElementById("stuff").innerHTML += `<iframe style="border-radius:12px" src="${new_final}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+            document.getElementById("stuff").innerHTML += `<center><iframe style="border-radius:12px;padding:0.1%" src="${new_final}?utm_source=generator" min-width="200px" width="20%" height="12%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></center>`;
             }
         
 

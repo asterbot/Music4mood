@@ -5,7 +5,8 @@ from flask import Flask, render_template, request,json
 global count
 count=0
 SPOTIFY_GET_RECOMMENDATIONS_URL = "https://api.spotify.com/v1/recommendations"
-ACCESS_TOKEN = "BQCgsQIwyfglSmHVYDRHrYKoRWB7yK_QsBtw_eFyVfr4_zyF6Pdoxy3jaekSXZCLlwt_oSHsjbjer0hTuMdenJ7EFeS2kQvfpJ9d8ZzY7wC8etlztZAkEi1Wcfn19Hx1zotvqQxPF5etAKUoDbaqZbSde8eWafZf_q4q9m1umW3p9bSGqQAeddDlpui2nY4"
+ACCESS_TOKEN = "BQAdTSM4eJL3hCIRV5R_J4ldFF6vdMBsMG73y8BVJ5Umq7B2PYGBJbrKP7nRqqtZR4BlZFiRFon7QQsnK4C3dfVTYqCNneeHJeGNZIVWFV20uUMryZsjeXE5dO7x25bVzn4Xvk8zYmJqqMORI5c4eM7PP93TgkKUZQ0DMAz33acgJ2WdiLTx08t9bkxT6I4"
+
 main = Flask(__name__)
 
 @main.route('/', methods=['POST','GET'])
