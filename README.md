@@ -2,12 +2,10 @@
 
 Created for MLH's RoboHacks II.
 
-## Description
+## Description and Aim
 
 Our website suggests personalized song recommendations based on the mood of a paragraph you submit. Upon submission, the website displays the Spotify tracks for you to listen to.
 
-## Aim
-We were inspired by music's ability to convey emotions beyond just words, so we created a website that helps us express ourselves in terms of music. 
 
 ## Technologies
 Flask, text2emotion library, Spotify API
