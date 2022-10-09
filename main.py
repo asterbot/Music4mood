@@ -5,8 +5,8 @@ from flask import Flask, render_template, request
 global count
 count=0
 SPOTIFY_GET_RECOMMENDATIONS_URL = "https://api.spotify.com/v1/recommendations"
-ACCESS_TOKEN = "BQATZzvVTd2szHJE6vG0GP7PchyjkcNkomF0fKChJOXcoD8uogdSfqOjsiGlE86jN3_weCRGFSq30zuedacbEPDbRJbX0F-FLlkZRJKrCCRRhWr3KeCMIAA_lcVvKvcGqTQmI7Ca4MYK2XWT06H7N-J4dX9CF39wjpDG3rB2loecINjUx_-mBvgcYa1_DWU"
-main = Flask(__name__, static_folder='static')
+ACCESS_TOKEN = "BQBGcLNJueX2E2MC4TG9gN7v7zmADPS64t3DVS8fCEkYZY_3ppjFtMQNSnRL8D1MN-TOqu3BHCudgg-G3dVY_rV4zwSh72R3JLQoGHqDXceKLW88GpUg97my5CWfaRpM4pXBGLbtgKo0rHoes-G8AqpQHUPis4HUSCAqrhEGi-ow6e64YuMvMWeNMTgDnsQ"
+main = Flask(__name__)
 
 @main.route('/', methods=['POST','GET'])
 def index():
@@ -53,7 +53,8 @@ def index():
 
             recommendations = get_recommendations_on_spotify(seed_artists=artists,seed_genres=genres,seed_tracks=tracks,limit=num,target_valence=target_valence,target_energy=target_energy,target_danceability=target_danceability,target_liveness=target_liveness,target_loudness=target_loudness)
             #print(recommendations)
-            all_recommendations = [(str(i['name'])+" by "+str(i['artists'][0]['name'])) for i in recommendations['tracks']]
+            #all_recommendations = [(str(i['name'])+" by "+str(i['artists'][0]['name'])) for i in recommendations['tracks']]
+            all_recommendations=[i['external_urls']['spotify'] for i in recommendations['tracks']]
             print(all_recommendations)
             
             return render_template('index.html', data=all_recommendations)
