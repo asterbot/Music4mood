@@ -15,7 +15,7 @@ Flask, text2emotion library, Spotify API
 ## Requirements
 
 
-#### Languages
+### Languages
 Python, Javascript, HTML, CSS
 
 
@@ -23,7 +23,7 @@ Python, Javascript, HTML, CSS
 - text2emotion: version 0.0.5
 - emoji: version 0.6.0
 - nltk: version 3.7
-- flask
+- flask: version 2.0.2
 
 ## How we built it
 We used the Python text2emotion library to assign the mood of a paragraph with five scores from the five emotions of happy, sad, anger, fear, and surprise. We then corresponded the emotions with Spotify track dimensions (such as loudness, valence, etc.) using Spotify's API. The backend was mainly built with Flask.
