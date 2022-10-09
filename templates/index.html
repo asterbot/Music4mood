@@ -11,7 +11,7 @@
             }
 
             .plop{
-            font-size: 25px;
+            font-size: 2em;
             font-family: monospace;
             color: #28536B;
             }              
@@ -20,12 +20,13 @@
                 background-color: #95D9DA;
                 color: #28536B;
                 border: 0px;
-                padding-left: 10%;
-                padding-right: 10%;
+                padding-left: 5%;
+                padding-right: 5%;
                 padding-top: 5%;
                 width: 60%;
+                min-width: 350px;
                 height: 60%;
-                font-size: 30px;
+                font-size: 3em;
                 text-align: center;
             }
 
@@ -41,7 +42,7 @@
                 z-index: 1;
                 color: #28536B;
                 padding: 0.7em 1.7em;
-                font-size: 18px;
+                font-size: 1.5em;
                 font-family: 'Trebuchet MS', sans-serif;
                 border-radius: 0.5em;
                 background: #ffffff;
@@ -88,6 +89,7 @@
             
             .button2:hover {
                 color: #ffffff;
+                background-color: #28536B;
                 border: 1px solid #28536B;
             }
             
@@ -108,21 +110,35 @@
             .slidecontainer {
                 width: 20%;
                 min-width: 200px;
+                box-shadow: 6px 6px 12px #E2CFEA,
+                -6px -6px 12px #E2CFEA;
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+                /* border-radius: 50%; */
+
+                
             }
             
             .slider {
-                /* -webkit-appearance: none; */
+                -webkit-appearance: none;
                 width: 100%;
                 height: 25px;
                 background: #ffffff;
                 outline: none;
-                opacity: 0.7;
+                /* opacity: 0.7; */
                 -webkit-transition: .2s;
                 transition: opacity .2s;
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+                border-radius: 0.5em;
+
             }
             
             .slider:hover {
-                opacity: 1;
+                opacity: 0.8;
+
             }
             
             .slider::-webkit-slider-thumb {
@@ -141,7 +157,7 @@
                 cursor: pointer;
             }
 
-        </style>
+    </style>
     </head>
     <body>
         <br>
@@ -149,16 +165,17 @@
         <br>
         <form method="GET">
         <center><textarea type="text" name="thetext" id="text" rows="30" cols="20" onclick="deletestuff()"></textarea></center>
-        <br><br><br>
-        <center><input class="button2" type="submit" value="Find me songs!">
-        </input></center>
-        <center>
-            <br><br>
-        <div class="slidecontainer">
+        <br><br>
+        <center><div class="slidecontainer">
             <input name="thenumoftracks" type="range" min="1" max="21" value="11" class="slider" id="myRange"></center>
             
             <center><p id="show" class="plop"></p></center>   
         </div>
+        <br>
+        <center><input class="button2" type="submit" value="Find me songs!">
+        </input></center>
+        <br><br>
+       
         <br>  
         </form>
         <center><p id="stuff"></p></center>
@@ -175,7 +192,8 @@
         }
 
         window.onload = function() {
-        word_by_word('What is your mood today? \n \n(Click here)');
+        word_by_word('How are you feeling today?\n...');
+        }
         stuff="{{ data }}";
         stuff_array=stuff.slice(0,stuff.length-1).split(",");    
         // document.getElementById("stuff").innerHTML = stuff_array;
@@ -184,7 +202,7 @@
             var new_final=final.slice(0,25).concat("embed/").concat(final.slice(25,final.length));
             document.getElementById("stuff").innerHTML += `<iframe style="border-radius:12px" src="${new_final}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
             }
-        }
+        
 
         var flag=false;
         function deletestuff(){
