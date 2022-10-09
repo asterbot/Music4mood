@@ -2,15 +2,17 @@
 <html>
 <body onload="dostuff()">
     <p>enter your mood</p>
-    <form method="POST">
-        <input type="text" name="thetext" />
-        <input type="text" name="thenumoftracks" />
-        <input type="submit" value="submit" />
+    <form method="GET">
+        <input type="text" name="thetext">
+        <input type="text" name="thenumoftracks">
+        <input type="submit" value="submit">
     </form>
     <p id="stuff">your songs</p>
 </body>
 <script>
-    document.getElementById("stuff").innerHTML = "{{ data }}";
+    function dostuff(){
+        document.getElementById("stuff").innerHTML = "{{ data }}";
+    }
 
 </script>
 </html>
