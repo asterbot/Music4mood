@@ -1,4 +1,4 @@
-# Robohacks
+# Music 4 Mood
 
 Created for MLH's RoboHacks II.
 
