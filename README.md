@@ -26,18 +26,12 @@ Python, Javascript, HTML, CSS
 - flask: version 2.0.2
 
 ## How we built it
-We used the Python text2emotion library to assign the mood of a paragraph with five scores from the five emotions of happy, sad, anger, fear, and surprise. We then corresponded the emotions with Spotify track dimensions (such as loudness, valence, etc.) using Spotify's API. The backend was mainly built with Flask.
+We used the Python text2emotion library to assign the mood of a paragraph with five scores from the five emotions of happy, sad, anger, fear, and surprise. We then created an algorithm to correspond the emotions with Spotify track properties (such as loudness, valence, etc.) using Spotify's API. The backend was mainly built with Flask.
 
 ## Roadmap
-We would like to implement our current features as part of a larger social media app, where users are able to share photos and text simultaneously with music. Below are features we'd like to include:
-
-#### Backup
-Users may save and export their writing and music to Google Drive
-
-#### Live social music detection
-The website detects when somebody nearby is in a similar mood or is listening to similar music.
+We would like to implement our current features as part of a larger social media app, where users are able to share photos and text simultaneously with music.
 
 ## Authors
-Arjun Sodhi: Backend Dev, UX/UI Wireframing/Prototyping, Algorithm Creation
+Arjun Sodhi: Mainly Backend Dev, UX/UI Wireframing/Prototyping, Algorithm Creation
 
-Cindy Li: Frontend Dev, UX/UI Design, Algorithm Creation
+Cindy Li: Mainly Frontend Dev, UX/UI Design, Algorithm Creation
