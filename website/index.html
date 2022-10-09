@@ -16,18 +16,18 @@
         <center>
             <br><br>
         <div class="slidecontainer">
-            <input type="range" min="1" max="50" value="25" class="slider" id="myRange"></center>
-            <br>
-            <center><p id="show">25</p></center>   
+            <input type="range" min="1" max="21" value="11" class="slider" id="myRange"></center>
+            
+            <center><p id="show" class="plop"></p></center>   
         </div>
     </body>
     <script>
         var slider = document.getElementById("myRange");
         var output = document.getElementById("show");
-        output.innerHTML = slider.value;
+        output.innerHTML = "Number of songs: ".concat(String(slider.value));
 
         slider.oninput = function() {
-        output.innerHTML = this.value;
+        output.innerHTML = "Number of songs: ".concat(String(this.value));
         }
 
         var flag=false;
